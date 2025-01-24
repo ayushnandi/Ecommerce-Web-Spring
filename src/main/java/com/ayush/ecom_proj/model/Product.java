@@ -19,6 +19,7 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonFormat(shape = JsonFormat.Shape.NUMBER_INT)
     private int id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private String name;
@@ -36,5 +37,6 @@ public class Product {
     private boolean available;
     @JsonFormat(shape = JsonFormat.Shape.NUMBER_INT)
     private int quantity;
+
 }
 
